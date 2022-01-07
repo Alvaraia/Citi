@@ -18,7 +18,7 @@ node ('master')
     stage('Deploy the war file')
     { 
         sshagent(['33c0e471-54ae-42aa-bc89-1e37f4ef8cd0']) {
-    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.2.82.215:/opt/apache-tomcat-9.0.54/webapps"
+    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.109.123.11:/opt/apache-tomcat-9.0.54/webapps"
     }
     }
     stage("send mail notification")
